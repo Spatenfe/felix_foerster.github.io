@@ -1,17 +1,17 @@
 export const siteData = {
-  name: 'Oscar Breiner',
-  title: 'TUM M.Sc. Informatics Student',
-  tagline: 'Theory-first when it matters. System-first when it counts.',
-  location: 'Munich, Germany',
+  name: 'Your Name',
+  title: 'Your Title / Tagline',
+  tagline: 'One sentence describing what you do and what you care about.',
+  location: 'City, Country',
   email: '',
-  githubUrl: 'https://github.com/oscarbreiner',
-  linkedinUrl: 'https://linkedin.com/in/oscarbreiner',
+  githubUrl: 'https://github.com/your-username',
+  linkedinUrl: 'https://linkedin.com/in/your-username',
   cvPath: 'cv.pdf',
-  heroChips: ['Machine Learning', 'Perception', 'Embodied AI', 'AI in Vision, Physics, and Robotics'],
+  heroChips: ['Skill One', 'Skill Two', 'Skill Three'],
 };
 
 export const seo = {
-  title: `${siteData.name} | AI & Perception Research`,
-  description: 'Portfolio of Oscar Breiner: AI, perception, radar, 3D vision, and robotics research with production-focused engineering.',
-  ogImage: 'public/images/champion.jpeg'
+  title: `${siteData.name} | Portfolio`,
+  description: 'Portfolio of Your Name: a short description of your focus areas for search engines and social previews.',
+  ogImage: '/images/og-cover.svg'
 };
