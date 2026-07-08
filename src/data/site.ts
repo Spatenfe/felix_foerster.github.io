@@ -1,17 +1,17 @@
 export const siteData = {
-  name: 'Your Name',
-  title: 'Your Title / Tagline',
-  tagline: 'One sentence describing what you do and what you care about.',
-  location: 'City, Country',
-  email: '',
-  githubUrl: 'https://github.com/your-username',
-  linkedinUrl: 'https://linkedin.com/in/your-username',
+  name: 'Felix Förster',
+  title: 'ML Engineer',
+  tagline: 'Deep learning across vision, language, and multi-agent systems — from LLM agents to reinforcement learning for autonomous navigation.',
+  location: 'Munich, Germany',
+  email: 'f.foerster@tum.de',
+  githubUrl: 'https://github.com/Spatenfe',
+  linkedinUrl: 'https://www.linkedin.com/in/felix-foerster-li/',
   cvPath: 'cv.pdf',
-  heroChips: ['Skill One', 'Skill Two', 'Skill Three'],
+  heroChips: ['Multi-Modal Learning', 'Data Engineering', 'Deep Learning'],
 };
 
 export const seo = {
   title: `${siteData.name} | Portfolio`,
-  description: 'Portfolio of Your Name: a short description of your focus areas for search engines and social previews.',
+  description: 'Portfolio of Felix Förster: deep learning, computer vision, and multi-agent reinforcement learning research and engineering.',
   ogImage: '/images/og-cover.svg'
 };

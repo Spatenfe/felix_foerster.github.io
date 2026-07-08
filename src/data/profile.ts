@@ -1,10 +1,9 @@
 export const profileDetails = {
   languages: [
-    'Language One (Proficiency)',
-    'Language Two (Proficiency)'
+    'English (C2)',
+    'German (Native)',
+    'Spanish (B1)'
   ],
-  certificates: [
-    'Certificate or Award Name'
-  ],
-  passions: ['Hobby One', 'Hobby Two']
+  certificates: [],
+  passions: ['Snowboarding', 'Running', 'Mechanical Keyboards', 'Gaming', 'Cultural exchange in Costa Rica (2020)']
 };

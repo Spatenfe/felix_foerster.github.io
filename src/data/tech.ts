@@ -5,11 +5,15 @@ export type TechGroup = {
 
 export const techGroups: TechGroup[] = [
   {
-    title: 'Category One',
-    items: ['Skill A', 'Skill B', 'Skill C']
+    title: 'AI / ML',
+    items: ['Deep Learning', 'Computer Vision', 'NLP', 'Reinforcement Learning', 'LLM Agents', 'Diffusion Models', '3D Geometry']
   },
   {
-    title: 'Category Two',
-    items: ['Tool A', 'Tool B', 'Tool C']
+    title: 'Programming',
+    items: ['Python', 'PyTorch', 'Java', 'C', 'SQL']
+  },
+  {
+    title: 'Tools & Platforms',
+    items: ['Git', 'Docker', 'Kubernetes', 'LangGraph', 'REST API', 'JUnit', 'Testkube']
   }
 ];
