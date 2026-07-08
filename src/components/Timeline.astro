@@ -18,7 +18,7 @@ const { variant = 'experience' } = Astro.props as Props;
 
 <div class="relative space-y-6 before:absolute before:bottom-0 before:left-[11px] before:top-0 before:w-px before:bg-border">
   {items.map((item) => (
-    <article class="relative pl-10 reveal">
+    <article class="group relative pl-10 reveal">
       <span
         class={`absolute left-0 top-1 h-[22px] w-[22px] rounded-full border bg-surface ${
           variant === 'experience' ? 'border-blue-500/70' : 'border-violet-500/70'
@@ -26,45 +26,50 @@ const { variant = 'experience' } = Astro.props as Props;
         aria-hidden="true"
       ></span>
       <div
-        class={`surface-card p-5 sm:p-6 ${
-          variant === 'experience'
-            ? 'bg-[linear-gradient(135deg,rgba(59,130,246,0.07)_0%,rgba(255,255,255,1)_30%)]'
-            : 'bg-[linear-gradient(135deg,rgba(139,92,246,0.07)_0%,rgba(255,255,255,1)_30%)]'
-        }`}
+        class="surface-card relative overflow-hidden p-5 transition duration-300 hover:-translate-y-1 hover:shadow-card sm:p-6"
       >
-        <header class="flex flex-wrap items-center justify-between gap-2">
-          <h3 class="font-display text-2xl leading-tight text-ink">{item.title}</h3>
-          <p
-            class={`font-mono text-[11px] uppercase tracking-wide ${
-              variant === 'experience' ? 'text-blue-700' : 'text-violet-700'
-            }`}
-          >
-            {item.meta}
-          </p>
-        </header>
-        <p class="mt-2 text-sm text-muted">{item.subtitle}</p>
+        <div
+          class={`pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 ${
+            variant === 'experience'
+              ? 'bg-gradient-to-tr from-blue-100/75 to-transparent'
+              : 'bg-gradient-to-tr from-violet-100/75 to-transparent'
+          }`}
+        ></div>
+        <div class="relative z-10">
+          <header class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-display text-2xl leading-tight text-ink">{item.title}</h3>
+            <p
+              class={`font-mono text-[11px] uppercase tracking-wide ${
+                variant === 'experience' ? 'text-blue-700' : 'text-violet-700'
+              }`}
+            >
+              {item.meta}
+            </p>
+          </header>
+          <p class="mt-2 text-sm text-muted">{item.subtitle}</p>
 
-        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-muted">
-          {item.bullets.map((bullet) => (
-            <li>{bullet}</li>
-          ))}
-        </ul>
-
-        {item.chips && item.chips.length > 0 && (
-          <div class="mt-4 flex flex-wrap gap-2">
-            {item.chips.map((chip) => (
-              <span
-                class={`rounded-md border px-2 py-1 font-mono text-[11px] ${
-                  variant === 'experience'
-                    ? 'border-blue-200 bg-blue-50 text-blue-700'
-                    : 'border-violet-200 bg-violet-50 text-violet-700'
-                }`}
-              >
-                {chip}
-              </span>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-muted">
+            {item.bullets.map((bullet) => (
+              <li>{bullet}</li>
             ))}
-          </div>
-        )}
+          </ul>
+
+          {item.chips && item.chips.length > 0 && (
+            <div class="mt-4 flex flex-wrap gap-2">
+              {item.chips.map((chip) => (
+                <span
+                  class={`rounded-md border px-2 py-1 font-mono text-[11px] transition ${
+                    variant === 'experience'
+                      ? 'border-blue-200 bg-blue-50 text-blue-700 group-hover:border-blue-300'
+                      : 'border-violet-200 bg-violet-50 text-violet-700 group-hover:border-violet-300'
+                  }`}
+                >
+                  {chip}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </article>
   ))}
