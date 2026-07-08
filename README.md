@@ -109,3 +109,7 @@ git push
 ```
 
 GitHub Actions will build and publish to Pages automatically.
+
+## Credits
+
+Original site template and design by [Oscar Breiner](https://github.com/oscarbreiner).
