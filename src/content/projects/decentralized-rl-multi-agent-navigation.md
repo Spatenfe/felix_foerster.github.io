@@ -5,7 +5,7 @@ date: 2025-03-01
 featured: true
 category: research
 venue: "IEEE IV 2025"
-tags: ["Reinforcement Learning", "Multi-Agent Systems", "Autonomous Vehicles", "Navigation"]
+tags: ["Reinforcement Learning", "Deep Learning", "Multi-Agent Systems", "Autonomous Vehicles"]
 image: "/images/projects/decentralized-rl-preview.png"
 imageFit: "contain"
 imagePadding: true
