@@ -16,6 +16,10 @@ body {
   @apply mx-auto w-full max-w-[94rem] px-4 sm:px-7 lg:px-12;
 }
 
+.content-with-toc {
+  @apply xl:pl-44;
+}
+
 .surface-card {
   @apply rounded-2xl border border-border bg-surface;
 }
