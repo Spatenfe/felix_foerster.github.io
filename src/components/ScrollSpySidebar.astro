@@ -1,0 +1,73 @@
+---
+interface Props {
+  items: { id: string; label: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<aside
+  class="pointer-events-none fixed left-8 top-1/2 z-40 hidden w-44 -translate-y-1/2 min-[1920px]:block"
+  aria-label="Section navigation"
+>
+  <ul class="pointer-events-auto space-y-3 border-l border-border">
+    {items.map((item) => (
+      <li>
+        <a
+          href={`#${item.id}`}
+          data-scrollspy-link
+          data-target={item.id}
+          class="-ml-px block border-l-2 border-transparent pl-4 text-xs leading-snug text-muted transition-colors duration-200 hover:text-ink"
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<script>
+  const links = Array.from(document.querySelectorAll('[data-scrollspy-link]'));
+
+  const sections = links
+    .map((link) => {
+      const id = link.getAttribute('data-target');
+      const el = id ? document.getElementById(id) : null;
+      return el ? { id, link, el } : null;
+    })
+    .filter(Boolean);
+
+  if (sections.length) {
+    const setActive = (activeId) => {
+      sections.forEach(({ id, link }) => {
+        const isActive = id === activeId;
+        link.classList.toggle('text-ink', isActive);
+        link.classList.toggle('font-bold', isActive);
+        link.classList.toggle('border-accent', isActive);
+        link.classList.toggle('text-muted', !isActive);
+        link.classList.toggle('border-transparent', !isActive);
+      });
+    };
+
+    const visible = new Set();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visible.add(entry.target.id);
+          } else {
+            visible.delete(entry.target.id);
+          }
+        });
+
+        const active = sections.find(({ id }) => visible.has(id));
+        if (active) setActive(active.id);
+      },
+      { rootMargin: '-15% 0px -70% 0px', threshold: 0 }
+    );
+
+    sections.forEach(({ el }) => observer.observe(el));
+    setActive(sections[0].id);
+  }
+</script>

@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import ScrollSpySidebar from '../components/ScrollSpySidebar.astro';
 import Timeline from '../components/Timeline.astro';
 import NewsFeed from '../components/NewsFeed.astro';
 import { techGroups } from '../data/tech';
@@ -38,10 +39,21 @@ const personalCards = [
   { title: 'Languages', items: profileDetails.languages },
   { title: 'Passions', items: profileDetails.passions }
 ];
+
+const sidebarItems = [
+  { id: 'news', label: 'News' },
+  { id: 'research', label: 'Research Highlights' },
+  ...(otherProjects.length > 0 ? [{ id: 'projects', label: 'Projects' }] : []),
+  { id: 'experience', label: 'Work Experience' },
+  { id: 'education', label: 'Education' },
+  { id: 'personal', label: 'Personal' },
+  { id: 'stack', label: 'Tech Stack' }
+];
 ---
 
 <BaseLayout>
   <Navbar />
+  <ScrollSpySidebar items={sidebarItems} />
   <main class="container-page pb-8">
     <Hero />
 
