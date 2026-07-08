@@ -22,6 +22,14 @@ function remarkBaseUrls() {
         node.url = prefix + node.url;
       }
     });
+    // Raw HTML images (e.g. hand-written <img> tags for layouts markdown
+    // syntax can't express) aren't "image" nodes, so rewrite their src too.
+    visit(tree, 'html', (node) => {
+      node.value = node.value.replace(/(<img\b[^>]*\bsrc=")(\/[^"]*)(")/g, (match, open, url, close) => {
+        if (url.startsWith(prefix + '/')) return match;
+        return `${open}${prefix}${url}${close}`;
+      });
+    });
   };
 }
 
