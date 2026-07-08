@@ -16,18 +16,20 @@ A TUM practical-course project with Andreas Weber, chaining together six public 
 
 ## Highlights
 
-- Orchestrated background generation, person/garment segmentation, lighting harmonization, text-to-garment generation, and virtual fitting into one pipeline built from six separately maintained foundation-model repos (each added as a git submodule against a fork).
-- Built and owned the backend serving layer: a WebSocket-based server exposing the pipeline as endpoints (garment choice, garment search, rating, size fitting), with garment-size inference and connection/session handling for concurrent clients.
+- Orchestrated background generation, person segmentation and pose estimation, lighting harmonization, garment sourcing, and virtual fitting into one pipeline built from six independently maintained foundation-model repos, each forked and pulled in as a git submodule.
+- Built and owned the backend serving layer: a single-client WebSocket server exposing the pipeline as seven request types (upload, background, design, fit, search_garment, choose_garment, rating), with request validation and session handling per connection.
 - Added SLURM cluster support so the pipeline runs on TUM's GPU cluster — allocation scripts and an SSH-forwarding startup script (`run_server.sh`) that let a client connect to a pipeline running on an allocated compute node.
-- Worked around integration friction across independently developed foundation models — differing tensor dtypes (a BF16 fix in the background remover), skippable stages, and moving StableVITON's fitting step to run standalone.
+- Worked around integration friction across independently developed foundation models — differing tensor dtypes (a BF16 fix in the background remover), skippable stages, and moving StableVITON's fitting step to run standalone from its own fork.
 
 ---
 
 ### How the pipeline fits together
 
-![STYLO-Pipeline architecture: background manipulation, lighting fix, person selection, and garment fit/modify stages](/images/projects/stylo-pipeline-architecture.png)
+<img src="/images/projects/stylo-pipeline-overview.png" alt="Step-by-step pipeline overview: start from a photo of a person, source or generate a garment, find the person, reset the scene, match the light, fit the garment, and get the result" class="float-right ml-6 mb-4 w-full max-w-[220px] rounded-lg border border-border sm:max-w-[260px]" />
 
-Each stage is a separately maintained foundation model wired together through a shared image/mask interface: [Yahoo's diffusion background generator](https://github.com/yahoo/photo-background-generation) replaces the scene behind the subject, [Harmonizer](https://github.com/ZHKKKe/Harmonizer/) corrects the resulting lighting mismatch, and person/garment regions are segmented with Meta's [SAM2](https://github.com/facebookresearch/sam2) and [YOLO-11](https://github.com/ultralytics/ultralytics). On the garment side, [LLaVA](https://huggingface.co/llava-hf/llava-1.5-7b-hf) turns a reference image into a text prompt that [Stable Diffusion 3.5](https://github.com/Stability-AI/sd3.5) uses to generate a new garment, which [StableVITON](https://github.com/rlawjdghek/StableVITON) then fits onto the selected person.
+Six independently maintained foundation-model repos, each forked and wired in as a git submodule, are chained through a shared image/mask interface. [Yahoo's diffusion background generator](https://github.com/yahoo/photo-background-generation) repaints the scene behind the subject from a text prompt, and [Harmonizer](https://github.com/ZHKKKe/Harmonizer/) corrects the resulting lighting mismatch. The person is located with text-prompted segmentation ([lang-segment-anything](https://github.com/luca-medeiros/lang-segment-anything), i.e. SAM2 grounded by prompts like "person." and "pants.") and posed with [DensePose](https://github.com/facebookresearch/detectron2/tree/main/projects/DensePose). On the garment side, a catalog is searched with CLIP embeddings — captioned offline by [LLaVA](https://huggingface.co/llava-hf/llava-1.5-7b-hf) — or a new garment is generated from a text prompt with [Stable Diffusion 3.5](https://github.com/Stability-AI/sd3.5); either way, [StableVITON](https://github.com/rlawjdghek/StableVITON) then warps and fits it onto the person, guided by the DensePose result.
+
+<div class="clear-both"></div>
 
 ### Results
 
