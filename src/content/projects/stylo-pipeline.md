@@ -5,14 +5,14 @@ date: 2025-07-09
 featured: true
 category: project
 tags: ["Computer Vision", "Generative AI", "Virtual Try-On", "Diffusion Models", "Image Editing"]
-image: "/images/projects/stylo-pipeline-banner.jpg"
-bannerImage: "/images/projects/stylo-pipeline-banner.jpg"
+image: "/images/projects/stylo-pipeline-demo.gif"
+bannerImage: "/images/projects/stylo-pipeline-demo.gif"
 imageFit: "contain"
 links:
   github: "https://github.com/weber-andreas/stylo-pipeline"
 ---
 
-A TUM practical-course project with Andreas Weber, chaining together six public vision foundation models into a single pipeline for virtual try-on and semantic outfit editing: swap out the background and lighting of a photo, select the person to dress, generate a new garment from a text prompt, and fit it onto them — end to end, no manual masking or compositing. The grid above shows the same base photos (top row) redressed in eight different source garments (left column), all produced by the pipeline.
+A TUM practical-course project with Andreas Weber, chaining together six public vision foundation models into a single pipeline for virtual try-on and semantic outfit editing: swap out the background and lighting of a photo, select the person to dress, generate a new garment from a text prompt, and fit it onto them — end to end, no manual masking or compositing. The animation above shows the pipeline's inputs — a source garment, a new background, and a person photo — combining into the fitted result.
 
 ## Highlights
 
@@ -31,4 +31,6 @@ Each stage is a separately maintained foundation model wired together through a 
 
 ### Results
 
-The comparison grid at the top of the page — background swaps across the top row, garment try-ons filling the grid below — is generated on the [VitonHD dataset](https://drive.google.com/file/d/1tLx8LRp-sxDp0EcYmYoV_vXdSc-jJ79w/view), the standard benchmark for high-resolution virtual try-on.
+![Result grid: eight source garments fitted onto eight base photos with swapped backgrounds](/images/projects/stylo-pipeline-results.jpg)
+
+Background swaps across the top row, garment try-ons filling the grid below, generated on the [VitonHD dataset](https://drive.google.com/file/d/1tLx8LRp-sxDp0EcYmYoV_vXdSc-jJ79w/view), the standard benchmark for high-resolution virtual try-on.
