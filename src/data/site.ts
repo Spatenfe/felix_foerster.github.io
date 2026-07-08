@@ -7,7 +7,6 @@ export const siteData = {
   githubUrl: 'https://github.com/Spatenfe',
   linkedinUrl: 'https://www.linkedin.com/in/felix-foerster-li/',
   cvPath: 'cv.pdf',
-  heroChips: ['Multi-Modal Learning', 'Data Engineering', 'Deep Learning'],
 };
 
 export const seo = {
