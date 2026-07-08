@@ -4,6 +4,7 @@ description: "Published research on decentralized reinforcement learning for mul
 date: 2025-03-01
 featured: true
 category: research
+venue: "IEEE IV 2025"
 tags: ["Reinforcement Learning", "Multi-Agent Systems", "Autonomous Vehicles", "Navigation"]
 image: "/images/projects/decentralized-rl-multi-agent-navigation.gif"
 bannerImage: "/images/projects/decentralized-rl-banner.png"
