@@ -6,7 +6,9 @@ featured: true
 category: research
 venue: "IEEE IV 2025"
 tags: ["Reinforcement Learning", "Multi-Agent Systems", "Autonomous Vehicles", "Navigation"]
-image: "/images/projects/decentralized-rl-multi-agent-navigation.gif"
+image: "/images/projects/decentralized-rl-preview.png"
+imageFit: "contain"
+imagePadding: true
 bannerImage: "/images/projects/decentralized-rl-banner.png"
 links:
   github: "https://github.com/Spatenfe/Decentralized_Reinforcement_Learning_for_Multi-Agent-Navigation_in_Unconstrained_Environments"
