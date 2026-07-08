@@ -1,7 +1,7 @@
 ---
-title: "fcku — Odds Calculator for \"Fuck You\" / Ring of Fire"
-description: "Flutter companion app for the drinking card game that recognizes drawn cards on-device with a YOLO model and computes win-probability recommendations via Monte Carlo simulation of the remaining deck."
-date: 2026-07-08
+title: "Playing Card Object Detection"
+description: "Flutter companion app for the drinking card game that recognizes drawn cards on-device with a fine-tuned YOLO model and computes win-probability recommendations via Monte Carlo simulation of the remaining deck."
+date: 2024-07-08
 featured: true
 category: project
 tags: ["Computer Vision", "Object Detection", "Monte Carlo Simulation", "On-Device ML", "Mobile"]
