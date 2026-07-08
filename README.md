@@ -95,7 +95,7 @@ Edit these files first:
 - `src/data/education.ts`
 - `src/data/tech.ts`
 - `src/content/projects/*.md`
-- `public/cv.pdf` (add your own — this file was removed during cleanup)
+- `public/cv.pdf`
 - `public/images/profile.svg` (replace with your own photo, e.g. `profile.jpg`, and update the path in `src/components/Hero.astro`)
 
 ## Deploy
