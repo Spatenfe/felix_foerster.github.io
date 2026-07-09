@@ -49,9 +49,12 @@ Each vehicle observes the scene from its own first-person, translated view of th
 
 ### Results
 
-For comparison, here is the baseline A-GNN agent on the same 10-vehicle, 8-obstacle scenario shown at the top of the page:
+For comparison, here is our agent against the baseline A-GNN agent on the same 10-vehicle, 8-obstacle scenario shown at the top of the page:
 
-![Baseline A-GNN agent on a 10-vehicle, 8-obstacle scenario](/images/projects/decentralized-rl-baseline-gnn.gif)
+<div class="flex flex-col gap-4 sm:flex-row">
+  <img src="/images/projects/decentralized-rl-multi-agent-navigation.gif" alt="Our agent on a 10-vehicle, 8-obstacle scenario" class="w-full sm:w-1/2" />
+  <img src="/images/projects/decentralized-rl-baseline-gnn.gif" alt="Baseline A-GNN agent on a 10-vehicle, 8-obstacle scenario" class="w-full sm:w-1/2" />
+</div>
 
 Evaluated on 4,062 held-out scenarios spanning 1–20 vehicles and 0–12 obstacles, our agent vs. the baseline:
 
