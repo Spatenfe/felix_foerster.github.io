@@ -9,6 +9,7 @@ const projects = defineCollection({
     featured: z.boolean().default(false),
     category: z.enum(['research', 'project']).default('project'),
     venue: z.string().optional(),
+    bibtex: z.string().optional(),
     tags: z.array(z.string()).default([]),
     image: z.string(),
     bannerImage: z.string().optional(),

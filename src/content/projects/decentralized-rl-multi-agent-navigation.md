@@ -5,6 +5,16 @@ date: 2025-03-01
 featured: true
 category: research
 venue: "IEEE IV 2025"
+bibtex: |
+  @inproceedings{forster2025decentralized,
+    author    = {F{\"o}rster, Felix and Khan, Qadeer and Cremers, Daniel},
+    title     = {Decentralized Reinforcement Learning for Multi-Agent Navigation in Unconstrained Environments},
+    booktitle = {2025 IEEE Intelligent Vehicles Symposium (IV)},
+    year      = {2025},
+    address   = {Cluj-Napoca, Romania},
+    pages     = {2067--2073},
+    doi       = {10.1109/IV64158.2025.11097389}
+  }
 tags: ["Reinforcement Learning", "Deep Learning", "Multi-Agent Systems"]
 image: "/images/projects/decentralized-rl-preview.gif"
 imageFit: "contain"
