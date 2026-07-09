@@ -15,6 +15,7 @@ const projects = defineCollection({
     bannerImage: z.string().optional(),
     imageFit: z.enum(['cover', 'contain']).default('cover'),
     imagePadding: z.boolean().default(false),
+    bannerPadding: z.boolean().default(false),
     links: z
       .object({
         github: z.string().url().optional(),

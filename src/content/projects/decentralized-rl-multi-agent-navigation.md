@@ -45,7 +45,7 @@ Supervised learning has demonstrated to be an effective strategy in training neu
 
 <img src="/images/projects/decentralized-rl-method-overview.png" alt="Overview of the environment and the two-stage PPO agent, from initial scenario to driven trajectories" class="mx-auto w-1/2" />
 
-Each vehicle observes the scene from its own first-person, translated view of the global state — its own kinematics, its target, and the closest obstacle or agent — and reacts with acceleration and steering commands. Handing off between a long-range PPO agent (coarse navigation toward the target) and a short-range PPO agent (precise final positioning) let the model stay accurate close to the goal without sacrificing the efficiency of the long-range policy.
+Each vehicle observes the scene from its own first-person, translated view of the global state — its own kinematics, its target, and the closest obstacle or agent — and reacts with acceleration and steering commands. Handing off between a long-range PPO agent (coarse navigation toward the target) and a short-range PPO agent (precise final positioning) lets the model stay accurate close to the goal without sacrificing the efficiency of the long-range policy.
 
 ### Results
 

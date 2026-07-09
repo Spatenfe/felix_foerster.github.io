@@ -1,6 +1,6 @@
 export const siteData = {
   name: 'Felix Förster',
-  title: 'Msc. Computer Science Student | Deep Learning Researcher & Engineer',
+  title: 'M.Sc. Computer Science Student | Deep Learning Researcher & Engineer',
   tagline: 'Deep learning across vision and language — from generative vision pipelines to LLM agents for real-world deployment.',
   location: 'Munich, Germany',
   email: 'f.foerster@tum.de',

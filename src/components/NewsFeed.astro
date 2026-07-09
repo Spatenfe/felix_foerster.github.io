@@ -12,7 +12,7 @@ const { items } = Astro.props;
 <div class="surface-card divide-y divide-border">
   {items.map((item, index) => (
     <div class="flex flex-col gap-1 p-4 sm:flex-row sm:items-baseline sm:gap-5 sm:p-5">
-      <span class:list={["shrink-0 font-mono text-[11px] uppercase tracking-wide text-muted sm:w-20", { "font-semibold": index === 0 }]}>{item.date}</span>
+      <span class:list={["shrink-0 font-mono text-xs uppercase tracking-wide text-muted sm:w-20", { "font-semibold": index === 0 }]}>{item.date}</span>
       {item.link ? (
         item.external ? (
           <a href={item.link} target="_blank" rel="noreferrer" class:list={["text-sm text-ink hover:text-accent", { "font-semibold": index === 0 }]}>{item.text}</a>

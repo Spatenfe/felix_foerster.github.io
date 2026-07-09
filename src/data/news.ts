@@ -7,14 +7,14 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
-    date: 'July 2026',
+    date: 'Jul 2026',
     text: 'I\'m happy to join Sophia Koepke and Alexei (Alyosha) Efros at BAIR, UC Berkeley for my research stay this summer.',
     link: 'https://bair.berkeley.edu/',
     external: true
   },
   {
     date: 'Feb 2026',
-    text: 'Published an ML benchmark for VBF Higgs-pair events with Lars Schneider and Johannes Mesner, advised by LMU Munich.',
+    text: 'Published an ML benchmark for VBF Higgs-pair events with Lars Schneider and Johannes Mesner, advised by Lars Linden and Celine Stauch (LMU Munich).',
     link: '/projects/vbf-event-classifier'
   },
   {

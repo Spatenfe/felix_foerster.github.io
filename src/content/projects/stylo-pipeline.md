@@ -8,6 +8,7 @@ tags: ["Computer Vision", "Deep Learning", "Generative AI"]
 image: "/images/projects/stylo-pipeline-demo.gif"
 bannerImage: "/images/projects/stylo-pipeline-demo.gif"
 imageFit: "contain"
+bannerPadding: true
 links:
   github: "https://github.com/weber-andreas/stylo-pipeline"
 ---

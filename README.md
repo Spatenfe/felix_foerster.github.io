@@ -76,8 +76,7 @@ Experience and education data live in:
 
 ## Key Routes
 
-- `/` Homepage with hero, featured projects, stack, experience, education
-- `/projects` All projects with client-side tag filter
+- `/` Homepage with hero, news, featured projects, stack, experience, education
 - `/projects/[slug]` Project detail page
 
 ## Base Path Safety
@@ -94,9 +93,11 @@ Edit these files first:
 - `src/data/experience.ts`
 - `src/data/education.ts`
 - `src/data/tech.ts`
+- `src/data/news.ts`
+- `src/data/profile.ts`
 - `src/content/projects/*.md`
 - `public/cv.pdf`
-- `public/images/profile.svg` (replace with your own photo, e.g. `profile.jpg`, and update the path in `src/components/Hero.astro`)
+- `public/images/profile.jpg` (replace with your own photo)
 
 ## Deploy
 

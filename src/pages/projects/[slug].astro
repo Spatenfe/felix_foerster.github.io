@@ -22,7 +22,7 @@ interface Props {
 
 const { project } = Astro.props as Props;
 const { Content } = await render(project);
-const { title, description, date, tags, image, bannerImage, category, bibtex } = project.data;
+const { title, description, date, tags, image, bannerImage, bannerPadding, category, bibtex } = project.data;
 const links = project.data.links ?? {};
 const banner = bannerImage ?? image;
 const backHref = withBase(category === 'research' ? '/#research' : '/#projects');
@@ -35,7 +35,7 @@ const backHref = withBase(category === 'research' ? '/#research' : '/#projects')
     <SectionHeader title={title} subtitle={description} />
 
     <article class="surface-card overflow-hidden">
-      <div class:list={['border-b border-border', project.slug === 'stylo-pipeline' && 'px-24 sm:px-48']}>
+      <div class:list={['border-b border-border', bannerPadding && 'px-24 sm:px-48']}>
         <img
           src={withBase(banner)}
           alt={title}
@@ -45,11 +45,11 @@ const backHref = withBase(category === 'research' ? '/#research' : '/#projects')
         />
       </div>
       <div class="p-6 sm:p-8">
-        <p class="font-mono text-[11px] uppercase tracking-wide text-muted">{date.getFullYear()}</p>
+        <p class="font-mono text-xs uppercase tracking-wide text-muted">{date.getFullYear()}</p>
 
         <div class="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span class="rounded-md border border-border bg-bg px-2 py-1 font-mono text-[11px] text-muted">{tag}</span>
+            <span class="rounded-md border border-border bg-bg px-2 py-1 font-mono text-xs text-muted">{tag}</span>
           ))}
         </div>
 
@@ -83,7 +83,7 @@ const backHref = withBase(category === 'research' ? '/#research' : '/#projects')
             <button
               type="button"
               data-copy-bibtex={bibtex}
-              class="copy-bibtex-btn ml-2 inline-flex -translate-y-px items-center gap-1.5 rounded-md border border-border bg-surface px-2 py-1 align-middle font-mono text-[11px] font-semibold text-ink transition hover:border-ink"
+              class="copy-bibtex-btn ml-2 inline-flex -translate-y-px items-center gap-1.5 rounded-md border border-border bg-surface px-2 py-1 align-middle font-mono text-xs font-semibold text-ink transition hover:border-ink"
             >
               <svg viewBox="0 0 24 24" class="h-3 w-3 stroke-current" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               <span class="copy-bibtex-label">Copy BibTeX</span>

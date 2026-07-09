@@ -123,7 +123,7 @@ const sidebarItems = [
         </div>
 
         <div id="education">
-          <SectionHeader title="Education" subtitle="Academic foundation in robotics, vision, and machine learning." />
+          <SectionHeader title="Education" subtitle="Academic foundation in computer vision, AI, and machine learning." />
           <Timeline items={educationItems} variant="education" />
         </div>
       </div>
@@ -155,12 +155,12 @@ const sidebarItems = [
                       <span
                         class={`rounded-lg border p-2 ${
                           idx === 0
-                            ? 'border-blue-200/50 bg-blue-50/50 text-blue-700/60'
+                            ? 'border-blue-200/50 bg-blue-50/50 text-blue-700'
                             : idx === 1
-                              ? 'border-indigo-200/50 bg-indigo-50/50 text-indigo-700/60'
+                              ? 'border-indigo-200/50 bg-indigo-50/50 text-indigo-700'
                               : idx === 2
-                                ? 'border-teal-200/50 bg-teal-50/50 text-teal-700/60'
-                                : 'border-slate-200/50 bg-slate-50/50 text-slate-700/60'
+                                ? 'border-teal-200/50 bg-teal-50/50 text-teal-700'
+                                : 'border-slate-200/50 bg-slate-50/50 text-slate-700'
                         }`}
                       >
                         {
@@ -222,8 +222,8 @@ const sidebarItems = [
                 <div
                   class={`pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 ${
                     idx === 0
-                      ? 'bg-gradient-to-tr from-indigo-100/38 to-transparent'
-                      : 'bg-gradient-to-tr from-rose-100/35 to-transparent'
+                      ? 'bg-gradient-to-tr from-indigo-100/40 to-transparent'
+                      : 'bg-gradient-to-tr from-rose-100/40 to-transparent'
                   }`}
                 ></div>
                 <div class="relative z-10">
@@ -231,8 +231,8 @@ const sidebarItems = [
                     <span
                       class={`rounded-lg border p-2 ${
                         idx === 0
-                          ? 'border-indigo-200/50 bg-indigo-50/50 text-indigo-700/60'
-                          : 'border-rose-200/50 bg-rose-50/50 text-rose-700/60'
+                          ? 'border-indigo-200/50 bg-indigo-50/50 text-indigo-700'
+                          : 'border-rose-200/50 bg-rose-50/50 text-rose-700'
                       }`}
                     >
                       {
@@ -278,9 +278,9 @@ const sidebarItems = [
           {siteData.email && (
             <a
               href={`mailto:${siteData.email}`}
-              class="rounded-lg border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#121a2d]"
+              class="rounded-lg border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-dark"
             >
-              f.foerster@tum.de
+              {siteData.email}
             </a>
           )}
           <a

@@ -9,7 +9,10 @@ module.exports = {
         border: '#d5d8df',
         ink: '#0b0d12',
         muted: '#4f5564',
-        accent: '#1d2942'
+        accent: {
+          DEFAULT: '#1d2942',
+          dark: '#121a2d'
+        }
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],

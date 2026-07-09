@@ -12,8 +12,7 @@ interface Props {
   variant?: 'experience' | 'education';
 }
 
-const { items } = Astro.props;
-const { variant = 'experience' } = Astro.props as Props;
+const { items, variant = 'experience' } = Astro.props;
 ---
 
 <div class="relative space-y-6 before:absolute before:bottom-0 before:left-[11px] before:top-0 before:w-px before:bg-border">
@@ -33,16 +32,16 @@ const { variant = 'experience' } = Astro.props as Props;
         <div
           class={`pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 ${
             variant === 'experience'
-              ? 'bg-gradient-to-tr from-blue-100/38 to-transparent'
-              : 'bg-gradient-to-tr from-violet-100/38 to-transparent'
+              ? 'bg-gradient-to-tr from-blue-100/40 to-transparent'
+              : 'bg-gradient-to-tr from-violet-100/40 to-transparent'
           }`}
         ></div>
         <div class="relative z-10">
           <header class="flex flex-wrap items-center justify-between gap-2">
             <h3 class="font-display text-2xl leading-tight text-ink">{item.title}</h3>
             <p
-              class={`font-mono text-[11px] uppercase tracking-wide ${
-                variant === 'experience' ? 'text-blue-700/60' : 'text-violet-700/60'
+              class={`font-mono text-xs uppercase tracking-wide ${
+                variant === 'experience' ? 'text-blue-700' : 'text-violet-700'
               }`}
             >
               {item.meta}
@@ -60,10 +59,10 @@ const { variant = 'experience' } = Astro.props as Props;
             <div class="mt-4 flex flex-wrap gap-2">
               {item.chips.map((chip) => (
                 <span
-                  class={`rounded-md border px-2 py-1 font-mono text-[11px] transition ${
+                  class={`rounded-md border px-2 py-1 font-mono text-xs transition ${
                     variant === 'experience'
-                      ? 'border-blue-200/50 bg-blue-50/50 text-blue-700/60 group-hover:border-blue-300/60'
-                      : 'border-violet-200/50 bg-violet-50/50 text-violet-700/60 group-hover:border-violet-300/60'
+                      ? 'border-blue-200/50 bg-blue-50/50 text-blue-700 group-hover:border-blue-300/60'
+                      : 'border-violet-200/50 bg-violet-50/50 text-violet-700 group-hover:border-violet-300/60'
                   }`}
                 >
                   {chip}

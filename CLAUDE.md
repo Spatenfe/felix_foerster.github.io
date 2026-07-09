@@ -32,7 +32,7 @@ The site must work both as a user site (`<user>.github.io`, base `/`) and a proj
 
 ### Content model
 
-Projects are an Astro content collection (`src/content/projects/*.md`), schema defined in `src/content/config.ts`. Key fields: `featured`, `category` (`research` | `project`) drive which homepage grid a project appears in; `image`/`bannerImage`/`imageFit` control card vs. detail-page rendering. `src/pages/projects/[slug].astro` renders each entry; `src/pages/projects/index.astro` lists all with a client-side tag filter (`TagFilter.astro`).
+Projects are an Astro content collection (`src/content/projects/*.md`), schema defined in `src/content/config.ts`. Key fields: `featured`, `category` (`research` | `project`) drive which homepage grid a project appears in; `image`/`bannerImage`/`imageFit`/`imagePadding`/`bannerPadding` control card vs. detail-page rendering. `src/pages/projects/[slug].astro` renders each entry.
 
 Non-project content (bio, experience, education, tech stack, news) lives as plain TS data modules in `src/data/*.ts` (`site.ts`, `experience.ts`, `education.ts`, `tech.ts`, `profile.ts`, `news.ts`), not content collections — edit these directly rather than adding schemas.
 
@@ -44,4 +44,4 @@ Single long scrolling page assembled from sections with stable `id`s (`news`, `r
 
 ### Styling
 
-Tailwind config (`tailwind.config.cjs`) defines the color palette (`bg`, `surface`, `border`, `ink`, `muted`, `accent`) and fonts (Plus Jakarta Sans / IBM Plex Mono) — use these tokens instead of raw Tailwind colors. Shared layout primitives (`.container-page`, `.section-spacing`, `.surface-card`, `.reveal` fade-in animation) live in `src/styles/global.css`, imported once via `BaseLayout.astro`.
+Tailwind config (`tailwind.config.cjs`) defines the color palette (`bg`, `surface`, `border`, `ink`, `muted`, `accent`/`accent-dark`) and fonts (Plus Jakarta Sans / IBM Plex Mono) — use these tokens instead of raw Tailwind colors. Shared layout primitives (`.container-page`, `.section-spacing`, `.surface-card`, `.reveal` fade-in animation) live in `src/styles/global.css`, imported once via `BaseLayout.astro`.
