@@ -45,16 +45,5 @@ export const experience: ExperienceEntry[] = [
       'Implemented a PDF/A verification tool for documents in Java as a back-end API.'
     ],
     tech: ['Java', 'Kubernetes', 'REST API', 'Testkube']
-  },
-  {
-    role: 'IT Infrastructure Lead',
-    company: 'Corona Test Facility',
-    location: 'Germany',
-    start: 'Mar 2021',
-    end: 'Mar 2022',
-    bullets: [
-      'Responsible for IT infrastructure and shift staff at a COVID-19 test facility.'
-    ],
-    tech: ['IT Infrastructure', 'Operations']
   }
 ];
