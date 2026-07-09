@@ -9,11 +9,7 @@ export const techGroups: TechGroup[] = [
     items: ['Deep Learning', 'Computer Vision', 'NLP', 'Reinforcement Learning', 'LLM Agents', 'Audio Processing', 'Speech Recognition', '3D Geometry']
   },
   {
-    title: 'Programming',
-    items: ['Python', 'PyTorch', 'Java', 'C', 'SQL', 'Dart/Flutter', 'Assembly']
-  },
-  {
-    title: 'Tools & Platforms',
-    items: ['Slurm', 'Git', 'Docker', 'Kubernetes', 'LangGraph', 'JUnit']
+    title: 'Programming & Tools',
+    items: ['Python', 'PyTorch', 'Java', 'C', 'SQL', 'Dart/Flutter', 'Assembly', 'Slurm', 'Git', 'Docker', 'Kubernetes', 'LangGraph', 'JUnit']
   }
 ];
