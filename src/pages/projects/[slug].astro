@@ -26,6 +26,7 @@ const { title, description, date, tags, image, bannerImage, bannerPadding, categ
 const links = project.data.links ?? {};
 const banner = bannerImage ?? image;
 const backHref = withBase(category === 'research' ? '/#research' : '/#projects');
+const writeupHref = links.writeup?.startsWith('/') ? withBase(links.writeup) : links.writeup;
 ---
 
 <BaseLayout title={`${title} | Project`} description={description}>
@@ -66,7 +67,7 @@ const backHref = withBase(category === 'research' ? '/#research' : '/#projects')
             </a>
           )}
           {links.writeup && (
-            <a href={links.writeup} class="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline" target="_blank" rel="noreferrer">
+            <a href={writeupHref} class="inline-flex items-center gap-1.5 font-semibold text-accent hover:underline" target="_blank" rel="noreferrer">
               <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 stroke-current" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               Write-up
             </a>

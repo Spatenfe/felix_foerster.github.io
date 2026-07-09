@@ -11,6 +11,7 @@ imageFit: "contain"
 bannerPadding: true
 links:
   github: "https://github.com/weber-andreas/stylo-pipeline"
+  writeup: "/stylo-pipeline-report.pdf"
 ---
 
 A TUM practical-course project with Andreas Weber, chaining together six public vision foundation models into a single pipeline for virtual try-on and semantic outfit editing: swap out the background and lighting of a photo, select the person to dress, generate a new garment from a text prompt, and fit it onto them — end to end, no manual masking or compositing. The animation above shows the pipeline's inputs — a source garment, a new background, and a person photo — combining into the fitted result.

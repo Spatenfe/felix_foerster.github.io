@@ -20,7 +20,9 @@ const projects = defineCollection({
       .object({
         github: z.string().url().optional(),
         demo: z.string().url().optional(),
-        writeup: z.string().url().optional()
+        // Unlike github/demo, a write-up can be a local public/ asset (e.g. a PDF
+        // report) referenced by root-relative path, not just an external URL.
+        writeup: z.string().optional()
       })
       .nullable()
       .optional()
