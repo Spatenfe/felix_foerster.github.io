@@ -61,4 +61,4 @@ The agent's advantage grows with scene density: it holds a substantially higher 
 
 ---
 
-F. Förster, Q. Khan and D. Cremers, "Decentralized Reinforcement Learning for Multi-Agent Navigation in Unconstrained Environments," 2025 IEEE Intelligent Vehicles Symposium (IV), Cluj-Napoca, Romania, 2025, pp. 2067-2073, doi: [10.1109/IV64158.2025.11097389](https://doi.org/10.1109/IV64158.2025.11097389). [Paper PDF](https://cvg.cit.tum.de/_media/spezial/bib/decentralizedrl2025.pdf).
+F. Förster, Q. Khan and D. Cremers, "Decentralized Reinforcement Learning for Multi-Agent Navigation in Unconstrained Environments," 2025 IEEE Intelligent Vehicles Symposium (IV), Cluj-Napoca, Romania, 2025, pp. 2067-2073, doi: [10.1109/IV64158.2025.11097389](https://doi.org/10.1109/IV64158.2025.11097389). [Paper PDF](https://cvg.cit.tum.de/_media/spezial/bib/decentralizedrl2025.pdf).<span id="bibtex-anchor"></span>
