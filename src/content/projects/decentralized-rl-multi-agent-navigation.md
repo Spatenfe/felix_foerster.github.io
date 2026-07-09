@@ -6,7 +6,7 @@ featured: true
 category: research
 venue: "IEEE IV 2025"
 tags: ["Reinforcement Learning", "Deep Learning", "Multi-Agent Systems"]
-image: "/images/projects/decentralized-rl-preview.png"
+image: "/images/projects/decentralized-rl-preview.gif"
 imageFit: "contain"
 imagePadding: true
 bannerImage: "/images/projects/decentralized-rl-banner.png"
