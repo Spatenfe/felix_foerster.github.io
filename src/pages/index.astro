@@ -141,8 +141,8 @@ const sidebarItems = [
                 <div
                   class={`pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 ${
                     idx === 0
-                      ? 'bg-gradient-to-tr from-indigo-100/75 to-transparent'
-                      : 'bg-gradient-to-tr from-rose-100/70 to-transparent'
+                      ? 'bg-gradient-to-tr from-indigo-100/38 to-transparent'
+                      : 'bg-gradient-to-tr from-rose-100/35 to-transparent'
                   }`}
                 ></div>
                 <div class="relative z-10">
@@ -150,8 +150,8 @@ const sidebarItems = [
                     <span
                       class={`rounded-lg border p-2 ${
                         idx === 0
-                          ? 'border-indigo-200 bg-indigo-50 text-indigo-700'
-                          : 'border-rose-200 bg-rose-50 text-rose-700'
+                          ? 'border-indigo-200/50 bg-indigo-50/50 text-indigo-700/60'
+                          : 'border-rose-200/50 bg-rose-50/50 text-rose-700/60'
                       }`}
                     >
                       {
@@ -172,7 +172,7 @@ const sidebarItems = [
                     {card.items.map((item) => (
                       <li
                         class={`rounded-lg border bg-bg px-3 py-1.5 transition group-hover:text-ink ${
-                          idx === 0 ? 'border-border group-hover:border-indigo-200' : 'border-border group-hover:border-rose-200'
+                          idx === 0 ? 'border-border group-hover:border-indigo-200/60' : 'border-border group-hover:border-rose-200/60'
                         }`}
                       >
                         {item}
@@ -195,12 +195,12 @@ const sidebarItems = [
                 <div
                   class={`pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 ${
                     idx === 0
-                      ? 'bg-gradient-to-br from-blue-100/80 to-transparent'
+                      ? 'bg-gradient-to-br from-blue-100/40 to-transparent'
                       : idx === 1
-                        ? 'bg-gradient-to-br from-indigo-100/80 to-transparent'
+                        ? 'bg-gradient-to-br from-indigo-100/40 to-transparent'
                         : idx === 2
-                          ? 'bg-gradient-to-br from-teal-100/80 to-transparent'
-                          : 'bg-gradient-to-br from-slate-100/80 to-transparent'
+                          ? 'bg-gradient-to-br from-teal-100/40 to-transparent'
+                          : 'bg-gradient-to-br from-slate-100/40 to-transparent'
                   }`}
                 ></div>
                 <div class="relative z-10">
@@ -209,12 +209,12 @@ const sidebarItems = [
                       <span
                         class={`rounded-lg border p-2 ${
                           idx === 0
-                            ? 'border-blue-200 bg-blue-50 text-blue-700'
+                            ? 'border-blue-200/50 bg-blue-50/50 text-blue-700/60'
                             : idx === 1
-                              ? 'border-indigo-200 bg-indigo-50 text-indigo-700'
+                              ? 'border-indigo-200/50 bg-indigo-50/50 text-indigo-700/60'
                               : idx === 2
-                                ? 'border-teal-200 bg-teal-50 text-teal-700'
-                                : 'border-slate-200 bg-slate-50 text-slate-700'
+                                ? 'border-teal-200/50 bg-teal-50/50 text-teal-700/60'
+                                : 'border-slate-200/50 bg-slate-50/50 text-slate-700/60'
                         }`}
                       >
                         {
@@ -248,12 +248,12 @@ const sidebarItems = [
                       <li
                         class={`rounded-lg border bg-bg px-3 py-1.5 transition group-hover:text-ink ${
                           idx === 0
-                            ? 'border-border group-hover:border-blue-200'
+                            ? 'border-border group-hover:border-blue-200/60'
                             : idx === 1
-                              ? 'border-border group-hover:border-indigo-200'
+                              ? 'border-border group-hover:border-indigo-200/60'
                               : idx === 2
-                                ? 'border-border group-hover:border-teal-200'
-                                : 'border-border group-hover:border-slate-300'
+                                ? 'border-border group-hover:border-teal-200/60'
+                                : 'border-border group-hover:border-slate-300/60'
                         }`}
                       >
                         {item}
