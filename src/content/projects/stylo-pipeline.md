@@ -5,9 +5,10 @@ date: 2025-07-09
 featured: true
 category: project
 authors:
-  - name: "Felix Förster"
-  - name: "Andreas Weber"
-tags: ["Computer Vision", "Deep Learning", "Generative AI"]
+  - name: "Felix Förster*"
+  - name: "Andreas Weber*"
+  - name: "Lars Schneider*"
+tags: ["Computer Vision", "Foundation Models", "Generative AI"]
 image: "/images/projects/stylo-pipeline-demo.gif"
 bannerImage: "/images/projects/stylo-pipeline-demo.gif"
 imageFit: "contain"

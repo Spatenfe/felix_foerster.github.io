@@ -5,10 +5,10 @@ date: 2025-02-01
 featured: true
 category: project
 authors:
-  - name: "Felix Förster"
-  - name: "Lars Schneider"
-  - name: "Tobias Neumeier"
-  - name: "Adrian Struzek"
+  - name: "Felix Förster*"
+  - name: "Lars Schneider*"
+  - name: "Tobias Neumeier*"
+  - name: "Adrian Struzek*"
 tags: ["Computer Vision", "Deep Learning", "3D Geometry"]
 image: "/images/projects/pixelnerf-upsampling-banner.png"
 bannerImage: "/images/projects/pixelnerf-upsampling-banner.png"
