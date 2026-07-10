@@ -12,7 +12,7 @@ const { publications } = Astro.props;
 
 <ol class="reveal flex flex-col gap-4 py-2">
   {publications.map((pub) => {
-    const { title, description, date, venue, image, authors, bibtex } = pub.data;
+    const { title, date, venue, image, authors, bibtex } = pub.data;
     const links = pub.data.links ?? {};
     const href = links.projectPage ?? withBase(`/projects/${pub.slug}`);
     const writeupHref = links.writeup?.startsWith('/') ? withBase(links.writeup) : links.writeup;
@@ -45,7 +45,6 @@ const { publications } = Astro.props;
               </a>
             </h3>
             {authors && authors.length > 0 && <AuthorList authors={authors} class="mt-1" />}
-            <p class="mt-2 text-sm leading-6 text-muted">{description}</p>
             <div class="mt-3 flex flex-wrap items-center gap-4 text-sm">
               <a
                 href={href}

@@ -1,5 +1,5 @@
 ---
-title: "Decentralized RL for Multi-Agent Navigation"
+title: "Decentralized Reinforcement Learning for Multi-Agent Navigation in Unconstrained Environments"
 description: "Published research on decentralized reinforcement learning for multi-agent vehicle navigation in unconstrained environments."
 date: 2025-03-01
 featured: true
