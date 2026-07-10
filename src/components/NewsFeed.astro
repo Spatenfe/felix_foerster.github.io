@@ -13,7 +13,24 @@ const { items } = Astro.props;
   {items.map((item, index) => (
     <div class="flex flex-col gap-1 p-4 sm:flex-row sm:items-baseline sm:gap-5 sm:p-5">
       <span class:list={["shrink-0 font-mono text-xs uppercase tracking-wide text-muted sm:w-20", { "font-semibold": index === 0 }]}>{item.date}</span>
-      {item.link ? (
+      {item.segments ? (
+        <p class:list={["text-sm text-ink", { "font-semibold": index === 0 }]}>
+          {item.segments.map((segment) =>
+            segment.link ? (
+              <a
+                href={segment.external ? segment.link : withBase(segment.link)}
+                target={segment.external ? '_blank' : undefined}
+                rel={segment.external ? 'noreferrer' : undefined}
+                class="hover:text-accent hover:underline"
+              >
+                {segment.text}
+              </a>
+            ) : (
+              segment.text
+            )
+          )}
+        </p>
+      ) : item.link ? (
         item.external ? (
           <a href={item.link} target="_blank" rel="noreferrer" class:list={["text-sm text-ink hover:text-accent", { "font-semibold": index === 0 }]}>{item.text}</a>
         ) : (

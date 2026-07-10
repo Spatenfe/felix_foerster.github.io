@@ -69,7 +69,10 @@ export const GET = async () => {
     '',
     '## News',
     '',
-    ...news.map((item) => `- ${item.date}: ${item.text}${item.link ? ` (${item.external ? item.link : abs(item.link)})` : ''}`),
+    ...news.map((item) => {
+      const text = item.text ?? item.segments?.map((segment) => segment.text).join('') ?? '';
+      return `- ${item.date}: ${text}${item.link ? ` (${item.external ? item.link : abs(item.link)})` : ''}`;
+    }),
     ''
   ];
 

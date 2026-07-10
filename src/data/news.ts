@@ -1,6 +1,13 @@
+export type NewsSegment = {
+  text: string;
+  link?: string;
+  external?: boolean;
+};
+
 export type NewsItem = {
   date: string;
-  text: string;
+  text?: string;
+  segments?: NewsSegment[];
   link?: string;
   external?: boolean;
 };
@@ -8,9 +15,19 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: 'Jul 2026',
-    text: 'I\'m happy to join Sophia Koepke and Alexei (Alyosha) Efros at BAIR, UC Berkeley for my research stay this summer.',
-    link: 'https://bair.berkeley.edu/',
-    external: true
+    segments: [
+      { text: "I'm happy to join " },
+      { text: 'Sophia Koepke', link: 'https://akoepke.github.io/', external: true },
+      { text: ' and ' },
+      {
+        text: 'Alexei (Alyosha) Efros',
+        link: 'https://scholar.google.com/citations?user=d97bGd8AAAAJ&hl=en',
+        external: true
+      },
+      { text: ' at ' },
+      { text: 'BAIR, UC Berkeley', link: 'https://bair.berkeley.edu/', external: true },
+      { text: ' for my research stay this summer.' }
+    ]
   },
   {
     date: 'Feb 2026',

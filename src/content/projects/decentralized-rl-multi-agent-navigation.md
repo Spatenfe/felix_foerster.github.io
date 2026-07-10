@@ -9,6 +9,7 @@ authors:
   - name: "Felix Förster"
   - name: "Qadeer Khan"
   - name: "Daniel Cremers"
+    url: "https://scholar.google.com/citations?user=cXQciMEAAAAJ&hl=en&oi=sra"
 bibtex: |
   @inproceedings{forster2025decentralized,
     author    = {F{\"o}rster, Felix and Khan, Qadeer and Cremers, Daniel},
