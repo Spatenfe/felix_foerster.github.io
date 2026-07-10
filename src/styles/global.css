@@ -22,6 +22,13 @@ body {
   @apply rounded-2xl border border-border bg-surface;
 }
 
+/* The typography plugin hardcodes 1rem on .prose (it doesn't read the theme
+   fontSize scale), so match the 1.25x base size here; children are em-based
+   and scale with it. */
+.prose {
+  font-size: 1.25rem;
+}
+
 .prose img {
   display: block;
   margin-left: auto;
