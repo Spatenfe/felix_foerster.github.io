@@ -38,7 +38,7 @@ const { items, variant = 'experience' } = Astro.props;
         ></div>
         <div class="relative z-10">
           <header class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="font-display text-2xl leading-tight text-ink">{item.title}</h3>
+            <h3 class="font-display text-xl leading-tight text-ink sm:text-2xl">{item.title}</h3>
             <p
               class={`font-mono text-xs uppercase tracking-wide ${
                 variant === 'experience' ? 'text-blue-700' : 'text-violet-700'
