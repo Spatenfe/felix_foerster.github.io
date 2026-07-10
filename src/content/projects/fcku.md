@@ -6,6 +6,8 @@ featured: true
 category: project
 authors:
   - name: "Felix Förster"
+  - name: "Aaron Mahlke"
+    url: "https://www.mahlke.design/"
 tags: ["Computer Vision", "Deep Learning", "On-Device ML"]
 image: "/images/projects/fcku-banner.png"
 bannerImage: "/images/projects/fcku-banner.png"
