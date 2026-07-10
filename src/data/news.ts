@@ -20,14 +20,17 @@ export const news: NewsItem[] = [
   {
     date: 'Mar 2025',
     text: 'Paper "Decentralized Reinforcement Learning for Multi-Agent Navigation in Unconstrained Environments" accepted at IEEE IV 2025.',
-    link: '/projects/decentralized-rl-multi-agent-navigation'
+    link: 'https://spatenfe.github.io/Decentralized_Reinforcement_Learning_for_Multi-Agent-Navigation_in_Unconstrained_Environments/',
+    external: true
+  },
+  {
+    date: 'Apr 2025',
+    text: 'Joined the Computer Vision Group (MuMoL) at TUM as a Student Assistant.',
+    link: 'https://akoepke.github.io/mumol.html',
+    external: true
   },
   {
     date: 'Oct 2024',
     text: 'Started the M.Sc. Computer Science program at the Technical University of Munich.'
-  },
-  {
-    date: 'Sep 2024',
-    text: 'Joined the Computer Vision Group (MuMoL) at TUM as a Student Assistant.'
   }
 ];
