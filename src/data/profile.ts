@@ -1,7 +1,7 @@
 export const profileDetails = {
   languages: [
-    'English (C2)',
     'German (Native)',
+    'English (C2)',
     'Spanish (B1)'
   ],
   passions: ['Snowboarding', 'Running', 'Mechanical Keyboards', 'Gaming']
