@@ -16,14 +16,15 @@ const cardHref = links.projectPage ?? withBase(`/projects/${project.slug}`);
 ---
 
 <article
-  class="project-card surface-card group flex h-full cursor-pointer flex-col overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-card"
+  class="project-card surface-card group flex h-full cursor-pointer flex-col transition duration-200 hover:-translate-y-1 hover:shadow-card"
   data-project-card
   data-project-url={cardHref}
+  data-project-external={links.projectPage ? 'true' : undefined}
   data-tags={tagDataset}
   tabindex="0"
   role="link"
 >
-  <div class="relative">
+  <div class="relative overflow-hidden rounded-t-2xl">
     {imagePadding ? (
       <div class="border-b border-border px-6 sm:px-8">
         <img
@@ -115,7 +116,11 @@ const cardHref = links.projectPage ?? withBase(`/projects/${project.slug}`);
       const href = card?.getAttribute('data-project-url');
       if (!href) return;
 
-      window.location.href = href;
+      if (card.hasAttribute('data-project-external')) {
+        window.open(href, '_blank', 'noopener,noreferrer');
+      } else {
+        window.location.href = href;
+      }
     });
 
     document.addEventListener('keydown', (event) => {
@@ -128,7 +133,11 @@ const cardHref = links.projectPage ?? withBase(`/projects/${project.slug}`);
 
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        window.location.href = href;
+        if (card.hasAttribute('data-project-external')) {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        } else {
+          window.location.href = href;
+        }
       }
     });
 
