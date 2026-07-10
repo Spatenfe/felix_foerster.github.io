@@ -22,7 +22,7 @@ imagePadding: true
 bannerImage: "/images/projects/decentralized-rl-banner.png"
 links:
   github: "https://github.com/Spatenfe/Decentralized_Reinforcement_Learning_for_Multi-Agent-Navigation_in_Unconstrained_Environments"
-  writeup: "https://spatenfe.github.io/Decentralized_Reinforcement_Learning_for_Multi-Agent-Navigation_in_Unconstrained_Environments/"
+  projectPage: "https://spatenfe.github.io/Decentralized_Reinforcement_Learning_for_Multi-Agent-Navigation_in_Unconstrained_Environments/"
 ---
 
 Research at the Computer Vision Group, TUM, on decentralized reinforcement learning for multi-agent vehicle navigation in unconstrained environments — published at IEEE IV 2025. The gif above shows the trained agent driving 10 vehicles around 8 static obstacles simultaneously, each vehicle acting on nothing but its own local view of the scene.

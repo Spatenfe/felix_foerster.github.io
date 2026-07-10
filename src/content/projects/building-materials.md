@@ -8,8 +8,6 @@ tags: ["Computer Vision", "Deep Learning", "Semantic Segmentation"]
 image: "/images/projects/building-materials-banner.png"
 bannerImage: "/images/projects/building-materials-banner.png"
 imageFit: "contain"
-links:
-  writeup: "/building-materials-report.pdf"
 ---
 
 A TUM practical course project (Deep Learning at Expert Level for Computer Vision and Biomedicine) analyzing polished concrete cross-sections: a U-Net segments each microscope image into air voids, aggregate, and cement paste and predicts a relative height map, with active learning used to prioritize which images were worth the effort of manual labeling.

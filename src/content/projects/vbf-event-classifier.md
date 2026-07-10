@@ -10,7 +10,7 @@ bannerImage: "/images/projects/vbf-event-classifier-banner.png"
 imageFit: "contain"
 links:
   github: "https://github.com/Spatenfe/vbf_event_classifier"
-  writeup: "https://spatenfe.github.io/vbf_event_classifier/"
+  projectPage: "https://spatenfe.github.io/vbf_event_classifier/"
 ---
 
 A machine-learning benchmark for non-resonant vector-boson-fusion (VBF) Higgs-pair production in the semileptonic decay channel, built with Lars Schneider and Johannes Mesner (TUM), advised by Lars Linden and Celine Stauch (LMU Munich). A modular experimentation framework runs 12 classical ML methods plus a PyTorch MLP and a set-based DeepSets model across a full ablation grid of scaling, sampling, and feature-selection strategies.
