@@ -5,6 +5,10 @@ date: 2025-03-01
 featured: true
 category: research
 venue: "IEEE IV 2025"
+authors:
+  - name: "Felix Förster"
+  - name: "Qadeer Khan"
+  - name: "Daniel Cremers"
 bibtex: |
   @inproceedings{forster2025decentralized,
     author    = {F{\"o}rster, Felix and Khan, Qadeer and Cremers, Daniel},

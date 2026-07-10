@@ -4,6 +4,12 @@ description: "Benchmarking 12+ ML methods, including DeepSets, to classify vecto
 date: 2026-02-01
 featured: true
 category: project
+authors:
+  - name: "Felix Förster"
+  - name: "Lars Schneider"
+  - name: "Johannes Mesner"
+  - name: "Lars Linden"
+  - name: "Celine Stauch"
 tags: ["Machine Learning", "Deep Learning", "Particle Physics"]
 image: "/images/projects/vbf-event-classifier-banner.png"
 bannerImage: "/images/projects/vbf-event-classifier-banner.png"

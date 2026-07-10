@@ -4,6 +4,8 @@ description: "A U-Net segmenting air voids, aggregate, and cement paste in concr
 date: 2024-03-21
 featured: true
 category: project
+authors:
+  - name: "Felix Förster"
 tags: ["Computer Vision", "Deep Learning", "Semantic Segmentation"]
 image: "/images/projects/building-materials-banner.png"
 bannerImage: "/images/projects/building-materials-banner.png"

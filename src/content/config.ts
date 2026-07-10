@@ -10,6 +10,14 @@ const projects = defineCollection({
     category: z.enum(['research', 'project']).default('project'),
     venue: z.string().optional(),
     bibtex: z.string().optional(),
+    authors: z
+      .array(
+        z.object({
+          name: z.string(),
+          url: z.string().url().optional()
+        })
+      )
+      .optional(),
     tags: z.array(z.string()).default([]),
     image: z.string(),
     bannerImage: z.string().optional(),

@@ -4,6 +4,9 @@ description: "Vision-foundation-model pipeline for virtual try-on and semantic o
 date: 2025-07-09
 featured: true
 category: project
+authors:
+  - name: "Felix Förster"
+  - name: "Andreas Weber"
 tags: ["Computer Vision", "Deep Learning", "Generative AI"]
 image: "/images/projects/stylo-pipeline-demo.gif"
 bannerImage: "/images/projects/stylo-pipeline-demo.gif"

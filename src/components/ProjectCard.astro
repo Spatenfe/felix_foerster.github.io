@@ -1,13 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { withBase } from '../utils/withBase';
+import AuthorList from './AuthorList.astro';
 
 interface Props {
   project: CollectionEntry<'projects'>;
 }
 
 const { project } = Astro.props;
-const { title, description, tags, image, date, venue, imageFit, imagePadding } = project.data;
+const { title, description, tags, image, date, venue, imageFit, imagePadding, authors } = project.data;
 const links = project.data.links ?? {};
 const writeupHref = links.writeup?.startsWith('/') ? withBase(links.writeup) : links.writeup;
 const tagDataset = tags.map((tag) => tag.toLowerCase()).join('|');
@@ -62,6 +63,7 @@ const cardHref = links.projectPage ?? withBase(`/projects/${project.slug}`);
 
   <div class="flex flex-1 flex-col p-5 sm:p-6">
     <h3 class="font-display text-xl leading-tight text-ink sm:text-2xl">{title}</h3>
+    {authors && authors.length > 0 && <AuthorList authors={authors} class="mt-1.5" />}
     <p class="mt-2 text-sm leading-6 text-muted" data-project-description>{description}</p>
 
     <div class="mt-4 flex flex-wrap gap-2">

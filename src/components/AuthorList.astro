@@ -1,0 +1,30 @@
+---
+import { siteData } from '../data/site';
+
+interface Author {
+  name: string;
+  url?: string;
+}
+
+interface Props {
+  authors: Author[];
+  class?: string;
+}
+
+const { authors, class: className = '' } = Astro.props;
+---
+
+<p class={`text-xs text-muted sm:text-sm ${className}`}>
+  {authors.map((author, i) => {
+    const isSelf = author.name === siteData.name;
+    const textClass = isSelf ? 'font-semibold text-ink' : 'font-medium';
+    const suffix = i < authors.length - 1 ? ', ' : '';
+    return author.url ? (
+      <>
+        <a href={author.url} target="_blank" rel="noreferrer" class={`${textClass} hover:text-accent hover:underline`}>{author.name}</a>{suffix}
+      </>
+    ) : (
+      <span class={textClass}>{author.name}{suffix}</span>
+    );
+  })}
+</p>

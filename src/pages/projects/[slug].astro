@@ -24,7 +24,7 @@ interface Props {
 
 const { project } = Astro.props as Props;
 const { Content } = await render(project);
-const { title, description, date, tags, image, bannerImage, bannerPadding, category, bibtex } = project.data;
+const { title, description, date, tags, image, bannerImage, bannerPadding, category, bibtex, authors } = project.data;
 const links = project.data.links ?? {};
 const banner = bannerImage ?? image;
 const backHref = withBase(category === 'research' ? '/#research' : '/#projects');
@@ -35,7 +35,7 @@ const writeupHref = links.writeup?.startsWith('/') ? withBase(links.writeup) : l
   <Navbar />
   <main class="container-page section-spacing">
     <a href={backHref} class="text-sm font-semibold text-accent hover:underline">← Back to Projects</a>
-    <SectionHeader title={title} subtitle={description} />
+    <SectionHeader title={title} subtitle={description} authors={authors} />
 
     <article class="surface-card overflow-hidden">
       <div class:list={['border-b border-border', bannerPadding && 'px-6 sm:px-8']}>
